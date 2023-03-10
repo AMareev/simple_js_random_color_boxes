@@ -1,6 +1,13 @@
 const board = document.querySelector('#board');
 const colors = ['#c7a6e2', '#d986d2', '#e2b5a7', '#dfdfa2', '#e8e8c4']
-const SQUARE_NUMBERS = 500;
+
+const container = document.querySelector('.container')
+
+
+const displaySize = container.clientHeight * container.clientWidth
+
+const SQUARE_NUMBERS = Math.floor(displaySize /256);
+console.log(SQUARE_NUMBERS)
 
 for (let i = 0; i < SQUARE_NUMBERS; i++) {
     const square = document.createElement('div')
